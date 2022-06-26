@@ -1,0 +1,28 @@
+.aligner-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.aligner-vertical {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 48%;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        width: unset;
+    }
+}
+
+.aligner-center {
+    justify-content: center;
+}

@@ -1,0 +1,23 @@
+.header-menu {
+    ul {
+        display: flex;
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            padding: 0 8px;
+
+            a {
+                font-family: Montserrat md;
+                color: #535353;
+                border: 1px black;
+                text-decoration: none;
+
+                &:hover {
+                    color: #2e2e2e;
+                }
+            }
+        }
+    }
+}

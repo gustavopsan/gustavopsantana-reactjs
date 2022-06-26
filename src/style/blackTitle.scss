@@ -1,0 +1,14 @@
+.black-title {
+    font-family: Montserrat md;
+    font-size: 3.300rem;
+    color: #000000;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 2.600rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 2.200rem;
+    }
+}

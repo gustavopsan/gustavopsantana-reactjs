@@ -1,0 +1,26 @@
+.footer-icons {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding-top: .5rem;
+
+    svg {
+        height: 25px;
+        width: 25px;
+        padding-right: 10px;
+    }
+}
+
+.footer-message {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 2rem;
+
+    span {
+        color: #535353;
+        font-size: 12px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+.text-element {
+    font-family: Montserrat rg;
+    font-size: 1.8rem;
+    margin-top: 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+    }
+}
+
+.small-text-element {
+    font-family: Montserrat rg;
+    font-size: 1.3rem;
+    padding: 0 10rem;
+    margin-top: 0;
+    text-align: justify;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+}

@@ -1,0 +1,9 @@
+.container-element {
+    min-height: calc(100vh - 34px - 50px - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

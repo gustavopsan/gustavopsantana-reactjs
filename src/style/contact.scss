@@ -1,0 +1,61 @@
+#form-contact{
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        label{
+            font-family: Bebas Neue;
+            font-size: 20px;
+            color: #535353;
+            margin-bottom: 5px;
+        }
+
+        input{
+            width: 95%;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 10px;
+            font-family: "JetBrains Mono",monospace;
+            font-size: 15px;
+            color: #535353;
+            margin-bottom: 10px;
+        }
+
+        textarea{
+            width: 95%;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 10px;
+            font-family: "JetBrains Mono",monospace;
+            font-size: 15px;
+            color: #535353;
+            margin-bottom: 10px;
+        }
+    }
+
+    button {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        padding: 10px;
+        font-family: "JetBrains Mono",monospace;
+        font-size: 15px;
+        color: #535353;
+        margin-bottom: 10px;
+
+        &:hover{
+            background-color: #535353;
+            color: #F2F2F2;
+            transition: ease-in-out 0.2s;
+        }
+    }
+}

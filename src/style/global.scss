@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+/* MONTSERRAT */
+
+@font-face {
+    font-family: Montserrat md;
+    src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf")
+}
+
+@font-face {
+    font-family: Montserrat rg;
+    src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf")
+}
+
+/* BEBAS NEUE */
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf")
+}
+
+.link-arede {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        color: #f1e740;
+    }
+}
