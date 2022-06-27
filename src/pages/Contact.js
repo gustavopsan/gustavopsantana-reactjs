@@ -28,7 +28,6 @@ const Contact = () => {
         let valid = 0; // Quantity of valid fields
 
         Object.entries(fields).forEach(field => {
-            console.log(field);
             if (field[1] === "") {
                 let message = `O campo ${field[0]} não pode ficar vazio. Preencha para continuar.`;
                 let messageElement = document.getElementById("form-message");
@@ -58,7 +57,6 @@ const Contact = () => {
                 html: mailContent
             })
             .then(response => {
-                console.log(response);
                 if (response.data.status === "success") {
                     let message = "Mensagem enviada com sucesso!";
                     let messageElement = document.getElementById("form-message");
