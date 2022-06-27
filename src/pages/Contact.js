@@ -52,7 +52,7 @@ const Contact = () => {
             <p>Email: ${fields.email}</p>
             <p>Mensagem: ${fields.message}</p>`;
 
-            axios.post("http://api-gustavopsantana.herokuapp.com/send-message", {
+            axios.post("https://api-gustavopsantana.herokuapp.com/send-message", {
                 destination: "gustavopsantana4@gmail.com",
                 subject: "Novo contato através do site gustavopsantana.dev.br",
                 html: mailContent
