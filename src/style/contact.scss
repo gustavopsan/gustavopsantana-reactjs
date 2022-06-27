@@ -6,6 +6,8 @@
     background-color: #F2F2F2;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
 
     .form-group{
         display: flex;
@@ -40,6 +42,30 @@
             color: #535353;
             margin-bottom: 10px;
         }
+    }
+
+    #form-message {
+        font-family: 'Montserrat md';
+        font-size: 11px;
+        align-self: center;
+        text-align: center;
+        padding: 5px;
+        color: #fff;
+        border-radius: 3px;
+        margin-bottom: 5px;
+    }
+
+    #form-message.hidden{
+        display: none;
+    }
+
+    #form-message.success {
+        background-color: #5feb5f;
+        color: #535353;
+    }
+
+    #form-message.error {
+        background-color: #eb5f5f;
     }
 
     button {

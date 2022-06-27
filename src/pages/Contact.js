@@ -24,7 +24,56 @@ const Contact = () => {
     
     function handleMailSubmit(event) {
         event.preventDefault();
-        console.log(fields);
+
+        let valid = 0; // Quantity of valid fields
+
+        Object.entries(fields).forEach(field => {
+            console.log(field);
+            if (field[1] === "") {
+                let message = `O campo ${field[0]} não pode ficar vazio. Preencha para continuar.`;
+                let messageElement = document.getElementById("form-message");
+
+                messageElement.innerHTML = message;
+                messageElement.classList.remove("hidden");
+
+                if (messageElement.classList.contains("success")) {
+                    messageElement.classList.remove("success");
+                }
+
+                messageElement.classList.add("error");
+            } else {
+                valid++; // Increment valid fields
+            }
+        });
+
+        if (valid === 3) {
+            let mailContent = `<h2>Novo contato através do site</h2>
+            <p>Nome: ${fields.name}</p>
+            <p>Email: ${fields.email}</p>
+            <p>Mensagem: ${fields.message}</p>`;
+
+            axios.post("http://api-gustavopsantana.herokuapp.com/send-message", {
+                destination: "gustavopsantana4@gmail.com",
+                subject: "Novo contato através do site gustavopsantana.dev.br",
+                html: mailContent
+            })
+            .then(response => {
+                console.log(response);
+                if (response.data.status === "success") {
+                    let message = "Mensagem enviada com sucesso!";
+                    let messageElement = document.getElementById("form-message");
+
+                    messageElement.innerHTML = message;
+                    messageElement.classList.remove("hidden");
+
+                    if (messageElement.classList.contains("error")) {
+                        messageElement.classList.remove("error");
+                    }
+
+                    messageElement.classList.add("success");
+                }
+            })
+        }
     }
 
     return (
@@ -48,8 +97,11 @@ const Contact = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Mensagem</label>
-                            <textarea className="form-control" id="message" rows="3" onChange={handleInputChange} defaultValue="Olá! Estou interessado(a) nos serviços informados pelo seu site! Por favor, entre em contato comigo!"></textarea>
+                            <textarea className="form-control" id="message" rows="3" onChange={handleInputChange} placeholder="Olá! Estou interessado(a) nos serviços informados pelo seu site! Por favor, entre em contato comigo!"></textarea>
                         </div>
+
+                        <span id="form-message" className="hidden">O campo "nome" não pode estar vazio, preencha todos os campos para continuar</span>
+
                         <button type="submit" className="btn btn-primary">Deixar Mensagem</button>
                     </form>
                 </Aligner>
