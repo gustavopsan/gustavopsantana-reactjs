@@ -5,7 +5,7 @@ import Image from "../components/Image";
 import WhiteTitle from "../components/WhiteTitle";
 import { Text } from "../components/Text";
 
-import manutencaoBackgroung from '../assets/img/fundo-manutencao.jpg';
+import manutencaoBackgroung from '../assets/img/fundo-manutencao.webp';
 import avisoImage from '../assets/img/aviso.png';
 
 const Portifolio = () => {
